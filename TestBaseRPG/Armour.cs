@@ -11,5 +11,12 @@ namespace TestBaseRPG
     {
         ArmourMaterial Material { get; set; }
         ArmourSlot Slot { get; set; }
+
+        public Armour (int id, string name, string namePlural, ArmourMaterial material,
+            ArmourSlot slot):base(id,name,namePlural)
+        {
+            Material = material;
+            Slot = slot;
+        }
     }
 }

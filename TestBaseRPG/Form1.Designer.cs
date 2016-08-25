@@ -47,6 +47,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.tb_Level = new System.Windows.Forms.TextBox();
             this.tb_Output = new System.Windows.Forms.TextBox();
+            this.bt_weapon = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tb_Name
@@ -201,11 +202,22 @@
             this.tb_Output.Size = new System.Drawing.Size(389, 78);
             this.tb_Output.TabIndex = 18;
             // 
+            // bt_weapon
+            // 
+            this.bt_weapon.Location = new System.Drawing.Point(222, 17);
+            this.bt_weapon.Name = "bt_weapon";
+            this.bt_weapon.Size = new System.Drawing.Size(109, 31);
+            this.bt_weapon.TabIndex = 19;
+            this.bt_weapon.Text = "Generate Weapon";
+            this.bt_weapon.UseVisualStyleBackColor = true;
+            this.bt_weapon.Click += new System.EventHandler(this.bt_weapon_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(646, 350);
+            this.Controls.Add(this.bt_weapon);
             this.Controls.Add(this.tb_Output);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.tb_Level);
@@ -254,6 +266,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox tb_Level;
         private System.Windows.Forms.TextBox tb_Output;
+        private System.Windows.Forms.Button bt_weapon;
     }
 }
 

@@ -13,6 +13,7 @@ namespace TestBaseRPG
     public partial class Form1 : Form
     {
         public Player p;
+        public static Random rnd = new Random();
 
         public enum ArmourMaterial
         { None, Cloth, Leather, Plate}
@@ -23,6 +24,7 @@ namespace TestBaseRPG
         public Form1()
         {
             InitializeComponent();
+            
         }
         void UpdateStats()
         {
@@ -44,6 +46,16 @@ namespace TestBaseRPG
             UpdateStats();
         }
 
- 
+        private void bt_weapon_Click(object sender, EventArgs e)
+        {
+            Sword Sw = new Sword(1, "Sword", "Swords");
+            Sw.Tier=(byte) Sw.GiveTier(rnd.Next(1,3));
+            Sw.MinDMG = Sw.GiveMinDMG(Sw.Tier);
+            Sw.MaxDMG = Sw.GiveMaxDMG(Sw.Tier);
+            Sw.APS = Sw.GiveAps();
+
+            tb_Output.Text = Sw.Name+" -- Tier: "+Sw.Tier.ToString()+" -- Min DMG: "+Sw.MinDMG.ToString()
+                +" -- Max DMG: "+Sw.MaxDMG.ToString()+" -- APS: "+Sw.APS.ToString();
+        }
     }
 }
