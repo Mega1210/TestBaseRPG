@@ -39,10 +39,12 @@ namespace TestBaseRPG
             tb_Exp.Text = p.Experience.ToString();
         }
 
+
+        
         private void Form1_Load(object sender, EventArgs e)
         {
             p = new Player(1, "Gab", 1, 1, 1, 1, 100, 100,1, 1, 1, 0);
-
+            
             UpdateStats();
         }
 
@@ -53,9 +55,11 @@ namespace TestBaseRPG
             Sw.MinDMG = Sw.GiveMinDMG(Sw.Tier);
             Sw.MaxDMG = Sw.GiveMaxDMG(Sw.Tier);
             Sw.APS = Sw.GiveAps();
-
+            
             tb_Output.Text = Sw.Name+" -- Tier: "+Sw.Tier.ToString()+" -- Min DMG: "+Sw.MinDMG.ToString()
                 +" -- Max DMG: "+Sw.MaxDMG.ToString()+" -- APS: "+Sw.APS.ToString();
+
+            
         }
     }
 }
